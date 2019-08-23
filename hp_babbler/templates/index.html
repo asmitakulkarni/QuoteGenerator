@@ -1,0 +1,24 @@
+<html>
+<head><title>Welcome to Zonko's</title></head>
+<body style="background-image: url(https://wallpaperplay.com/walls/full/b/4/6/155772.jpg); background-repeat: no-repeat center fixed; background-size: cover;">
+<br /> <br /> <br />
+<h1 style="color:white;" align = 'center'>Welcome to Zonko's Joke Shop!</h1>
+<br /> <br /> <br /><br />
+    <form align = 'center' action = "/" method = "POST" style="padding: 10px 30px;">
+        <select style="font-size: 16px;" name='character'>
+            <option value='HARRY' {% if character == 'HARRY' %} selected {% endif %}>Harry</option>
+            <option value='HERMIONE' {% if character == 'HERMIONE' %} selected {% endif %}>Hermione</option>
+            <option value='RON' {% if character == 'RON' %} selected {% endif %} >Ron</option>
+            <option value='DUMBLEDORE' {% if character == 'DUMBLEDORE' %} selected {% endif %}>Dumbledore</option>
+            <option value='HAGRID' {% if character == 'HAGRID' %} selected {% endif %}>Hagrid</option>
+            <option value='MCGONAGALL' {% if character == 'MCGONAGALL' %} selected {% endif %}>McGonagall</option>
+        </select>
+        <input style="font-size: 1.5em;" type="submit" value="Generate!">
+    </form>
+<br /> <br /> <br />
+    {% if character %}
+        <p class="white_box" align = 'center' style="padding: 10px 40px; color:white; font-size: 20px"> {{ character|capitalize }} : "{{ output }}" </p>
+    {% endif %}
+
+</body>
+</html>

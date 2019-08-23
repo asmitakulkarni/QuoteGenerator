@@ -1,0 +1,6 @@
+Project 4
+
+Pre processing :
+* converted pdfs to text using pdf2txt.py on command line
+* cleaning text files in sublime using macros regex etc
+
